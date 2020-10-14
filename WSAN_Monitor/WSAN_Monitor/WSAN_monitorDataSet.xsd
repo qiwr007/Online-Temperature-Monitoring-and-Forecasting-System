@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WSAN_monitorDataSet" targetNamespace="http://tempuri.org/WSAN_monitorDataSet.xsd" xmlns:mstns="http://tempuri.org/WSAN_monitorDataSet.xsd" xmlns="http://tempuri.org/WSAN_monitorDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WSAN_monitorConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WSAN_monitorConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WSAN_Monitor.Properties.Settings.GlobalReference.Default.WSAN_monitorConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Actor_count_InfoTableAdapter" GeneratorDataComponentClassName="Actor_count_InfoTableAdapter" Name="Actor_count_Info" UserDataComponentName="Actor_count_InfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WSAN_monitorConnectionString (Settings)" DbObjectName="WSAN_monitor.dbo.Actor_count_Info" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Iremarks, SUM_MAX, Wdate FROM dbo.Actor_count_Info</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Iremarks" DataSetColumn="Iremarks" />
+              <Mapping SourceColumn="SUM_MAX" DataSetColumn="SUM_MAX" />
+              <Mapping SourceColumn="Wdate" DataSetColumn="Wdate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WSAN_monitorDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="WSAN_monitorDataSet" msprop:Generator_UserDSName="WSAN_monitorDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Actor_count_Info" msprop:Generator_TableClassName="Actor_count_InfoDataTable" msprop:Generator_TableVarName="tableActor_count_Info" msprop:Generator_TablePropName="Actor_count_Info" msprop:Generator_RowDeletingName="Actor_count_InfoRowDeleting" msprop:Generator_UserTableName="Actor_count_Info" msprop:Generator_RowChangingName="Actor_count_InfoRowChanging" msprop:Generator_RowEvHandlerName="Actor_count_InfoRowChangeEventHandler" msprop:Generator_RowDeletedName="Actor_count_InfoRowDeleted" msprop:Generator_RowEvArgName="Actor_count_InfoRowChangeEvent" msprop:Generator_RowChangedName="Actor_count_InfoRowChanged" msprop:Generator_RowClassName="Actor_count_InfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Iremarks" msprop:Generator_ColumnVarNameInTable="columnIremarks" msprop:Generator_ColumnPropNameInRow="Iremarks" msprop:Generator_ColumnPropNameInTable="IremarksColumn" msprop:Generator_UserColumnName="Iremarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUM_MAX" msprop:Generator_ColumnVarNameInTable="columnSUM_MAX" msprop:Generator_ColumnPropNameInRow="SUM_MAX" msprop:Generator_ColumnPropNameInTable="SUM_MAXColumn" msprop:Generator_UserColumnName="SUM_MAX" type="xs:int" minOccurs="0" />
+              <xs:element name="Wdate" msprop:Generator_ColumnVarNameInTable="columnWdate" msprop:Generator_ColumnPropNameInRow="Wdate" msprop:Generator_ColumnPropNameInTable="WdateColumn" msprop:Generator_UserColumnName="Wdate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
